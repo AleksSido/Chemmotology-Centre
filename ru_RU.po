@@ -1,0 +1,137 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: chemmotology-centre\n"
+"POT-Creation-Date: 2016-07-15 14:35+0300\n"
+"PO-Revision-Date: 2016-07-22 19:56+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: __;_x;_e;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: contact-us.php:8
+msgid "Thank you for mailing us!"
+msgstr "Благодарим Вас за письмо!"
+
+#: contact-us.php:13
+msgid "Mail a letter to us: "
+msgstr "Отправить нам письмо:"
+
+#: contact-us.php:15
+msgid "Name"
+msgstr ""
+
+#: contact-us.php:19
+msgid "Your phone"
+msgstr "Ваш телефон"
+
+#: contact-us.php:21
+msgid "Your message"
+msgstr "Ваше сообщение"
+
+#: contact-us.php:23
+msgid "Send"
+msgstr "Отправить"
+
+#: contact-us.php:24
+msgid "Reset"
+msgstr "Очистить поля"
+
+#: footer.php:18 header.php:26
+msgid "UkrREC of Chemmotology and Certification of FLTL"
+msgstr "УкрНИУЦ химмотологии и сертификации ГСМ и ТЖ"
+
+#: footer.php:21
+msgid "Developed by Sidorov Aleksandr"
+msgstr "Разработал Сидоров Александр"
+
+#: header.php:22
+msgid "Activity"
+msgstr "Деятельность"
+
+#: header.php:31
+msgid "Problems of Chemmotology. Theory and"
+msgstr "Проблемы химмотологии. Теория и практика"
+
+#: header.php:31
+msgid "Practice of Rational Use of Traditional and"
+msgstr "рационального использования традиционных и"
+
+#: header.php:31
+msgid "Alternative Fuel and Lubricants"
+msgstr "альтернативных горюче-смазочных материалов"
+
+#: header.php:32
+msgid "The VIth International Conference of Science and Technology"
+msgstr "VI Международная научно-техническая конференция"
+
+#: header.php:34
+msgid "UkrREC"
+msgstr "УкрНИУЦ"
+
+#: header.php:34
+msgid "of Chemmotology and Certification of FLTL"
+msgstr "химмотологии и сертификации ГСМ и ТЖ"
+
+#: header.php:35
+msgid "Ukrainian Research and Educational Center"
+msgstr "Украинский научно-исследовательский и учебный центр"
+
+#: header.php:35
+msgid ""
+"of Chemmotology and Certification of Fuels, Lubricants and Technical Liquids"
+msgstr ""
+"химмотологии и сертификации горюче-смазочных материалов и технических "
+"жидкостей"
+
+#: index.php:21 page-history-and-archives.php:17 page-novyny.php:34
+#: page_conference.php:16 page_without-backlogo.php:40 search.php:21
+msgid "404 Error&#58; Not Found"
+msgstr "404 Ошибка&#58; Не найдено"
+
+#: page-novyny.php:23
+msgid "Read news"
+msgstr "Читать новость"
+
+#: page-novyny.php:30
+msgid "Previous News&rarr;"
+msgstr "Предыдущие новости&rarr;"
+
+#: page-novyny.php:31
+msgid "&larr; Next News"
+msgstr "&larr;  Следующие новости"
+
+#: search.php:10
+#, php-format
+msgid "Search Results for &#8220;%s&#8221;"
+msgstr ""
+
+#: searchform.php:10
+msgctxt "placeholder"
+msgid "Search "
+msgstr ""
+
+#: searchform.php:12
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: single.php:25
+msgid "Back to News"
+msgstr "Вернуться к новостям"
+
+#: 404.php:10
+msgid "Error 404"
+msgstr "Ошибка 404"
+
+#: 404.php:11
+msgid "Sorry, but there is nothing found for your request!"
+msgstr "Сожалеем, но по Вашему запросу ничего не найдено!"

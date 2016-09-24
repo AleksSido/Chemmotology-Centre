@@ -1,0 +1,602 @@
+/*
+Theme Name: Chemmotology-Centre
+Theme URI: 
+Author: Oleksandr Sydorov
+Author URI:
+Description: The Chemmotology-Centre theme developed for multilingual site. The front page contains only emblem of company (it directs to native language site) and three language options for redirect to appropriate language site. Main template with left sidebar menu is similar for all pages, but for some pages may be applied template "Without Background Logo". The theme is responsive. There is also template for event of company ("Conference Problems of Chemmotology"), which has its own header and its own menu for event subpages due to conditional tags in the 'header.php'. Theme also contains search form, contact form and template part for social networks share buttons.
+Version: 1.0
+License: GNU General Public License v2
+License URI:http://www.gnu.org/licenses/gpl-2.0.html
+Tags: two-columns, left-sidebar, custom-header, custom-menu, featured-image-header
+Text Domain: chemmotology-centre
+*/
+
+body {
+	font-size: 8px;	
+}
+
+
+/***********************/
+/** FOR FRONT-PAGE.PHP  */
+/**********************/
+#front-page-logo {
+	display: block;	
+	position: relative;
+	z-index: 1;	
+	height: auto;
+	width: auto;	
+	max-width: 100%;
+	max-height: 80%;
+	max-height: 80vh;
+	margin: 5% auto;
+	margin: 5vh auto;	
+	opacity: 0;	
+}
+#lang-uk, 
+#lang-ru, 
+#lang-en {
+	position: absolute;
+	z-index: 5;
+	transform: rotateX(90deg);
+	border: 3px double #ffffff;
+	padding: 0.25% 0.5%;
+	background-color: #000099;
+	color: #ffffff;	
+	font-family: 'Lora', serif;
+	text-decoration: none;	
+}
+#lang-uk:hover, 
+#lang-ru:hover, 
+#lang-en:hover {
+	border: 3px double #000099;	
+	background-color: #ffffff;
+	color: #000099;
+}
+
+/***********************/
+/**   FOR HEADER.PHP   */
+/***********************/
+
+.header div.row {	
+	box-shadow: 1vw 1vw 0.5vw #b3d9ff;
+	margin-right: -1vw;
+	margin-bottom: 2vw;
+	background: linear-gradient(to bottom right, #b3d9ff, #ffffff, #ffffff);
+}
+.for-image-header {
+	display: none;
+	float: left;
+	padding: 1vw 2vw;	
+}
+.for-site-title {	
+	float: left;
+	margin-left: 1vw;
+}
+h1 {
+	border-bottom: 1px solid #5894de;
+	width: auto;
+	max-width: auto;
+	font-family: 'Jura', sans-serif;
+	color: #088384;
+	text-shadow: 1px 1px 2px #05058a;	
+}
+h1 > a, 
+h1 > a:hover {
+	text-decoration: none;
+	color: #088384;
+}
+.conference-h1 {
+	padding-top: 3vh;
+}
+.site-description {
+	padding-top: 1vh;
+	border-top: 1px solid #a763ff;
+	font-family: 'Jura', sans-serif;		
+	color: #8969c5;
+}
+
+/****
+***** Navigation Menu
+****/
+.navbar-header {
+	position: absolute;
+	top: 1vh;
+	right: 2vw;
+}
+.navbar-toggle {
+	border: 1px solid #5894de;
+	margin-top: 0;
+}
+.icon-bar {
+	background: #a763ff;
+}
+div.menu > ul.nav-stacked > li.page_item {
+	border-right: 1px solid #0033cc;
+	border-bottom: 1px solid #0033cc;
+	box-shadow: 1vw 1vw 0.5vw #b3d9ff;
+	margin: 0 1.5vw 1.5vw 0;
+	max-width: 90vw;
+}
+div.menu > ul.nav-stacked > li.page_item > a {
+	border-radius: 0px;	
+	text-align: center;
+	font-family: 'Philosopher', sans-serif;	
+}
+div.menu > ul.nav-stacked > li.page_item > a:hover,
+div.menu > ul.nav-stacked > li.page_item > a:active {	
+	background: #0033cc;
+	color: white;
+}
+.nav .open > a, 
+.nav .open > a:focus, 
+.nav .open > a:hover {
+	background-color: #0033cc;
+	color: #ffffff;
+}
+div.menu > ul.nav-stacked > li.page_item > ul.dropdown-menu {
+	padding: 0;
+	right: 0;
+}
+div.menu > ul.nav-stacked > li.page_item > ul.dropdown-menu > li.page_item > a {
+	border-bottom: 1px solid #c2c2d6;
+	text-align: center;
+	font-family: 'Jura', sans-serif;
+	color: #8969c5;
+	overflow: hidden;
+}
+div.menu > ul.nav-stacked > li.page_item > ul.dropdown-menu > li.page_item > a:hover {
+	border: 1px solid #0033cc;
+	color: #0033cc;	
+}
+
+
+.for-header-lang-icons {
+	display: flex;
+	position: absolute;
+	right: 25vw;
+}
+.for-header-lang-icons > a {
+	float: left;
+	/*padding: 0.25% 3%;*/
+	margin: 1vh 0.5vw;
+	border-right: 1px solid #000099;
+	border-bottom: 1px solid #000099;
+	box-shadow: 0.25vw 0.25vw 0.5vw #cccccc;
+	background-color: #ffffff;	
+	font-family: 'Lora', serif;
+	color: #000099;
+	text-decoration: none;	
+}
+.for-header-lang-icons > a:hover,
+.search-button:hover {
+	border-bottom: 3px double #ffffff;	
+	border-right: 3px double #ffffff;	
+	background-color: #000099;
+	color: #ffffff;
+}
+#lang-uk-header {
+	padding: 0.25vh 0.5vw;
+}
+#lang-ru-header {
+	padding: 0.25vh 0.5vw;
+}
+#lang-en-header {
+	padding: 0.25vh 0.5vw;
+}
+.for-header-contacts {
+	display: none;
+	margin-top: 10vh;
+}
+div.for-header-contacts > p.e-mail-footer, 
+div.for-header-contacts > p.phone-footer {
+	text-align: right;
+}
+
+
+/*****************************/
+/**   FOR SEARCHFORM.PHP   */
+/***************************/
+
+.search-form {
+	float: left; 
+	margin: 1vh 0.5vw; 
+}
+.search-form > label {
+	margin-bottom: 0;
+}
+.search-form > label > input.search-field {
+	display: none;
+}
+.search-button {
+	border: none;
+	padding: 0.25vh 0.5vw;
+	border-right: 1px solid #000099;
+	border-bottom: 1px solid #000099;
+	box-shadow: 0.25vw 0.25vw 0.5vw #cccccc;
+	background-color: #ffffff;	
+	color: #000099;
+}
+.glyphicon-search {
+	line-height: 1.42857143;
+}
+
+
+/*****************************/
+/**   FOR SEARCH.PHP   */
+/***************************/
+
+.for-search {
+	display: flex;
+	justify-content: center;
+}
+.for-search > .search-form {
+	float: none; 
+	margin: 1vh 0.5vw; 
+}
+.for-search > .search-form > label > input.search-field {
+	display: inline-block;
+}
+
+/***********************/
+/**   FOR INDEX.PHP   */
+/***********************/
+
+.for-page-content {
+	margin-bottom: 2vw;
+	box-shadow: 1vw 1vw 0.5vw #cccccc;
+	background: linear-gradient(to bottom right, #b3d9ff, #ffffff, #ffffff, #ffffff);
+}
+.page-content {
+	padding: 1% 3%;
+	background: url(http://chemmotology.nau.edu.ua/wp-content/uploads/2016/06/logo025.png) no-repeat center;
+	background-size: 25% auto;	
+}
+.no-background {
+	background: none;
+}
+.parent-page-title {
+	border-bottom: 1px solid #5894de;
+	text-align: center;
+	font-family: 'Lora', serif;
+	color: #088384;
+	text-shadow: 1px 1px 2px #05058a;
+}
+.page-title, 
+.news-title {
+	padding-bottom: 1%;
+	border-bottom: 1px dotted #a763ff;
+	text-align: center;
+	font-family: 'Comfortaa', cursive;
+	color: #8969c5;
+	text-shadow: 1px 1px 2px #0900ff;
+}
+.page-content p,
+.page-content ul li,
+.page-content ol li,
+.page-content form {
+	font-family: 'PT Serif Caption', serif;
+	color: #295888;
+}
+.page-content p img {
+	width: auto;
+	height: auto;
+	max-width: 50vw;
+	max-height: 75vh;
+}
+.page-content p iframe {
+	max-width: 50vw;
+	max-height: 50vh;
+}
+
+
+/*****************************/
+/**   FOR PAGE-NOVYNY.PHP   */
+/***************************/
+.news-title {
+	font-family: 'PT Serif Caption', serif;
+}
+.page-content a img.attachment-post-thumbnail {
+	float: left;
+	margin-right: 2vw;
+	width: auto;
+	height: auto;
+	max-width: 150px;
+	max-height: 150px;
+}
+.page-content a img.attachment-post-thumbnail + p {
+	text-align: justify;
+}
+.post-date {
+	text-align: right;
+	font-style: italic;
+}
+.novyny-post-hyperlink:hover {
+	text-decoration: none;	
+}
+.link-read-news {	
+	display: flex;	
+	justify-content: flex-end;	
+}
+.link-read-news > p,
+.link-read-news > a > p {
+	padding: 1vh 1vw;
+	border: 3px double #ffffff;
+	border-radius: 25px;
+	background: #323267;
+	font-family: 'Jura', sans-serif;	
+	color: #ffffff !important;	
+}
+.link-read-news > a {
+	text-decoration: none;
+}
+.link-read-news > p > a {
+	text-decoration: none;
+	color: #ffffff !important;
+}
+.link-read-news > p:hover,
+.link-read-news > a > p:hover {
+	border: 3px double #323267;
+	background: #ffffff;
+	color: #323267 !important;	
+}
+.link-read-news > p:hover > a {
+	color: #323267 !important;
+}
+.for-pagination {
+	text-align: center;
+}
+.for-pagination > a {
+	font-family: 'Jura', sans-serif;
+}
+
+
+/*******************************/
+/**   FOR SHARE-BUTTONS.PHP   */
+/*****************************/
+
+.social-buttons {
+	display: flex;
+	justify-content: center;
+	border-top: 1px dotted #003399;
+}
+.btn-social-icon {
+	margin: 1% 0.5%; 
+	border: 1px solid #5894de;
+	padding-left:30px;
+	height:18px;
+	width:18px;
+	padding-left:0;
+	padding-right:0;	
+}
+.btn-social-icon > .fa {
+	line-height:16px;
+	width:16px;
+	font-size:0.8em;
+}
+/*style under is taken from bootstrap-social.css for btn-...social network... class*/
+.icon-twitter:hover {color:#fff;background-color:#55acee;border-color:rgba(0,0,0,0.2)}
+.icon-facebook:hover {color:#fff;background-color:#3b5998;border-color:rgba(0,0,0,0.2)}
+.icon-google:hover {color:#fff;background-color:#dd4b39;border-color:rgba(0,0,0,0.2)}
+.icon-linkedin:hover {color:#fff;background-color:#007bb6;border-color:rgba(0,0,0,0.2)}
+.icon-odnoklassniki:hover {color:#fff;background-color:#f4731c;border-color:rgba(0,0,0,0.2)}
+.icon-vk:hover {color:#fff;background-color:#587ea3;border-color:rgba(0,0,0,0.2)}
+
+
+/***********************/
+/**   FOR FOOTER.PHP   */
+/***********************/
+
+.for-footer {
+	margin-right: -1vw;
+	margin-bottom: 2vw;
+	padding: 1vw;
+	box-shadow: 1vw 1vw 0.5vw #cccccc;	
+	background: linear-gradient(to bottom right, #cccccc, #ffffff, #ffffff);
+}
+.copyright, 
+.e-mail-footer, 
+.phone-footer, 
+.developer {
+	color: #3f73ab;
+}
+.copyright, 
+.developer {
+	margin-left: 1vw;
+	margin-right: 1vw;
+	font-family: 'Forum', cursive;
+	text-decoration: none;
+}
+.for-centre-position {
+	display: flex;
+	justify-content: center;	
+}
+.e-mail-footer, 
+.phone-footer {
+	margin-left: 1vw;
+	margin-right: 1vw;
+	font-family: 'Jura', sans-serif;	
+}
+
+
+/***********************/
+/**   FOR CONTACT-US.PHP   */
+/***********************/
+.contact-form  {
+	text-align: center;
+	margin-bottom: 1vh;
+}
+
+
+/***********************/
+/**   MEDIA QUERIES   */
+/***********************/
+
+@media (min-width: 450px) {
+body {
+    font-size: 9px;
+}
+.for-site-title {
+	margin-left: 4vw;
+}
+.for-header-lang-icons {
+	right: 15vw;
+}
+}
+
+@media (min-width: 670px) {
+body {
+    font-size: 11px;
+}
+.for-image-header {
+	display: block;	
+	padding: 1vw 0.5vw;
+	max-height: 22vmin;	
+}
+.for-image-header img {	
+	max-height: 18vmin;
+}
+.for-site-title {
+	margin-left: 0;
+}
+}
+
+@media (min-width: 768px) {
+body {
+    font-size: 12.5px;
+}
+.for-image-header {
+	padding: 1vw;
+	max-height: 24vmin;
+}
+div.for-image-header img {	
+	max-height: 20vmin;/* 18min leads to normal on ipad */
+}
+h1 {
+	text-shadow: 2px 2px 3px #05058a;
+}
+.conference-h1 {
+	padding-top: 0;
+}
+.for-header-lang-icons {
+	right: 2vw;
+}
+.for-site-nav {
+	float: left;
+}
+div.menu {
+	padding-left: 0;
+	margin-left: -10px;
+}
+div.menu > ul.nav-stacked > li.page_item {
+	max-width: 18vmin;
+}
+div.menu > ul.nav-stacked > li.page_item > ul.dropdown-menu {
+	right: auto;
+}
+.for-page-content {
+	width: 74%;	
+}
+div.page-content a img.attachment-post-thumbnail {	
+	max-width: 300px;
+	max-height: 300px;
+}
+.btn-social-icon {
+	padding-left:30px;
+	height:22px;
+	width:22px;
+	padding-left:0;
+	padding-right:0;	
+}
+.btn-social-icon > .fa {
+	line-height:20px;
+	width:20px;
+	font-size:1.1em;
+}
+}
+
+@media (min-width: 850px) {
+body {
+    font-size: 14px;
+}
+.for-image-header {
+	max-height: 26vmin;
+}
+.for-image-header img {	
+	max-height: 22vmin;
+}
+div.menu > ul.nav-stacked > li.page_item {
+	max-width: 20vmin;
+}
+}
+
+@media (min-width: 992px) {
+body {
+    font-size: 16px;
+}
+.header div.row, 
+.for-footer {
+	margin-right: 0.5vw;
+}
+.for-image-header {
+	padding: 1vw 1.5vw;
+	max-height: 28vmin;
+}
+.for-image-header img {	
+	max-height: 24vmin;
+}
+h1 {
+	text-shadow: 2px 2px 4px #05058a;
+}
+.parent-page-title {
+	text-shadow: 2px 2px 3px #05058a;
+}
+div.menu > ul.nav-stacked > li.page_item {
+	max-width: 26vmin;
+}
+.btn-social-icon {
+	padding-left:38px;
+	height:26px;
+	width:26px;
+	padding-left:0;
+	padding-right:0;	
+}
+.btn-social-icon > .fa {
+	line-height:24px;
+	width:24px;
+	font-size:1.2em;
+}
+}
+
+@media (min-width: 1200px) {
+body {
+    font-size: 18px;
+}
+.for-image-header {	
+	padding: 1vw 3vw;
+	max-height: 30vmin;
+}
+.for-image-header img {	
+	max-height: 26vmin;
+}
+div.menu > ul.nav-stacked > li.page_item {
+	max-width: 32vmin;
+}
+.btn-social-icon {
+	padding-left:44px;
+	height:34px;
+	width:34px;
+	padding-left:0;
+	padding-right:0;	
+}
+.btn-social-icon > .fa  {
+	line-height:34px;
+	width:32px;
+	font-size:1.6em;
+}
+}
+
+@media (min-width: 1450px) {
+.for-header-contacts {
+	display: block;
+}
+}
